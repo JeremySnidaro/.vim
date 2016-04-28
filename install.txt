@@ -1,0 +1,22 @@
+# Put this in ~/.vimrc
+echo "source ~/.vim/.vimrc" > ~/.vimrc
+
+#create /.vim/colors folder with molokai.vim inside
+
+# Run this command to install Vundle the plugin manager :
+git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+
+
+# For YouCompleteMe make sure you have the right verison of vim :
+vim --version
+# Check if there are a +python.
+# You need to have Vim 7.3.598 or higher with python2 or python3 support.
+
+# Install the libs to use YCM :
+apt-get install build-essential cmake
+apt-get install python-dev python3-dev
+
+# compile YCM : 
+# Go to the YCM folder in .vim/bundle/YouCompleteMe/
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
