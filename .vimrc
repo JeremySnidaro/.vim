@@ -41,6 +41,8 @@ Plugin 'octol/vim-cpp-enhanced-highlight' " To enable syntax highlighting
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'tomtom/viki_vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,6 +70,7 @@ set expandtab " Convert tab to space.
 
 set backspace=indent,eol,start " Normal use of backspace in insert mode.
 set autoindent " Copy indent from current line when starting a new line. 
+set smartindent " Do smart autoindenting when starting a new line. 
 set showmode " If in Insert, Replace or Visual mode 
 			 " put a message on the last line with the name of the mode.
 set showcmd " Show (partial) command in the last line of the screen. 
@@ -91,6 +94,6 @@ autocmd FileType vim setlocal keywordprg=:help
 
 "START--Custom-Command
 
-command Main :r /command/command_main_cpp.txt
+command Main :r ~/.vim/command/command_main_cpp.txt
 
 "END--Custom-Command
